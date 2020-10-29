@@ -1,0 +1,362 @@
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightskyblue;
+
+}
+
+.wrapper {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1.0s ease 0s;
+}
+
+.wrapper.active{
+opacity: 1;
+}
+.wrapper.active .parallax_wave{
+    opacity: 1;
+    transition: all 1.0s ease 1.0s;
+}
+.wrapper.active .parallax_rope{
+    opacity:1;
+    transition: all 1.0s ease 2.4s;
+}
+.wrapper.active .parallax_liteHouse{
+    bottom: 100px;
+    transition: all 1.0s ease 3s;
+}
+.wrapper.active .parallax_ship {
+    opacity: 1;
+    transition: all 1.0s ease 4s;
+}
+.wrapper.active .parallax_island {
+    opacity: 1;
+    transition: all 1.0s ease 1.5s;
+}
+.wrapper.active .sweets{
+    opacity: 1;
+    transition: all 1.0s ease 7s;
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+}
+
+.parallax {
+    flex: 1 0 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*height: 100%;*/
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
+}
+
+.parallax_list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax_list li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax_bg {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: -5%;
+    left: -5%;
+    /*background: url("./img/background.jpg") 50% 100% /cover no-repeat;*/
+}
+
+.parallax_rope {
+    position: absolute;
+    width: 100%;
+    left: -10%;
+    opacity: 0;
+}
+
+.parallax_rope img {
+    width: 100%;
+}
+
+.parallax_rope_1 {
+    top: 5%;
+    transform: scale(1);
+}
+
+.parallax_rope_2 {
+    top: -1.66667%;
+    transform: scale(1.05556);
+}
+
+.parallax_rope_3 {
+    top: -11.66667%;
+    transform: scale(1.3889);
+}
+.parallax_rope-1 .parallax_element {
+transform: scale(0.6);
+}
+
+.parallax_rope-2 .parallax_element {
+    transform: scale(0.75556);
+}
+
+.parallax_rope-3 .parallax_element {
+    transform: scale(0.98889);
+}
+
+.parallax_element {
+    position: absolute;
+}
+
+.parallax_element span {
+    display: inline-block;
+    transform-origin: 50% 0;
+    width: 180px;
+    height: 180px;
+    margin: 0px 0px 0px -140px;
+    animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.parallax_element_1 {
+    top: 28%;
+    left: 20%;
+}
+
+.parallax_element_1 span {
+    background: url("./img/clouds/board-cloud-2.png") 0 0 /100% no-repeat;
+}
+
+.parallax_element_2 {
+    top: 46%;
+    left: 40%;
+}
+
+.parallax_element_2 span {
+    background: url("./img/clouds/board-cloud-1.png") 0 0/100% no-repeat;
+}
+
+.parallax_element_3 {
+    top: 24%;
+    left: 80%;
+}
+
+.parallax_element_3 span {
+    background: url("./img/clouds/board-birds.png") 0 0/100% no-repeat;
+}
+
+.parallax_element_4 {
+    left: 10%;
+    top: 17%;
+}
+
+.parallax_element_4 span {
+    background: url("./img/clouds/board-cloud-1.png") 0 0/ 100% no-repeat;
+}
+
+.parallax_element_5 {
+    left: 50%;
+    top: 56%;
+}
+
+.parallax_element_5 span {
+    background: url("./img/clouds/board-cloud-4.png") 0 0 / 100% no-repeat;
+}
+
+.parallax_element_6 {
+    left: 30%;
+    top: 57%;
+}
+
+.parallax_element_6 span {
+    background: url("./img/clouds/board-birds.png") 0 0 / 100% no-repeat;
+}
+
+.parallax_element_7 {
+    left: 60%;
+    top: 65%;
+}
+
+.parallax_element_7 span {
+    background: url("./img/clouds/board-cloud-2.png") 0 0 / 100% no-repeat;
+}
+
+.parallax_element_8 {
+    left: 80%;
+    top: 45%;
+    width: 208px;
+}
+
+.parallax_element_8 span {
+    background: url("./img/clouds/board-cloud-3.png");
+}
+
+.parallax_wave {
+    position: absolute;
+    background: url("./img/sea-clip.png") 0 0 / auto 101% repeat-x;
+    left: -100%;
+    width: 300%;
+    opacity: 0;
+}
+
+.parallax_wave_1 {
+    bottom: 180px;
+    height: 86px;
+    animation: wave 7.11111s 0.1s infinite linear;
+    background: url("./img/sea-clip.png") 0 0 / auto 101% repeat-x;
+}
+
+.parallax_wave_2 {
+    bottom: 144px;
+    height: 115px;
+    animation: wave 6.6667s 0.1s infinite linear;
+}
+
+.parallax_wave_3 {
+    bottom: 100px;
+    height: 144px;
+    animation: wave 6.2222s 0.1s infinite linear;
+    background: url("./img/sea-clip.png") 0 0 / auto 101% repeat-x;
+}
+
+.parallax_wave_4 {
+    bottom: 72px;
+    height: 153px;
+    animation: wave 5.7777s 0.1s infinite linear;
+}
+
+.parallax_wave_5 {
+    bottom: -1px;
+    height: 190px;
+    animation: wave 4.8888s 0.1s infinite linear;
+}
+
+.parallax_wave_6 {
+
+    bottom: -72px;
+    height: 208px;
+    animation: wave 4.5s 0.1s infinite linear;
+    background: url("./img/sea-clip.png") 0 0 / auto 101%;
+}
+
+.parallax_liteHouse {
+    background: url("./img/lighthouse.png") 0 0 no-repeat;
+    width: 320px;
+    height : 460px;
+    position: absolute;
+    right: 1%;
+    bottom: -100%;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.parallax_ship {
+    opacity: 0;
+    width: 180px;
+    height: 100px;
+    /*background: url("./img/kissp.png ");*/
+    /*background: 100%;*/
+    position: absolute;
+    bottom: 230px;
+    right: 50%;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.boot{
+    width: 379px;
+    height:  219px;
+}
+.parallax_ship span {
+    width: 100%;
+    height: 100%;
+    /*background: url("./img/kisspng-sailboat-sailboat-clip-art-hand-painted-boat-5aaa0fa7e239a4.4970231915210945679266.jpg");*/
+}
+.parallax_island {
+    opacity: 0;
+    position: absolute;
+    top: 90px;
+    width: 400px;
+    height: 350px;
+}
+.islandImg{
+    width: 400px;
+    height: 350px;
+}
+.sweets{
+    opacity: 0;
+    position: absolute;
+    width: 180px;
+    height: 200px;
+    bottom: 160px;
+    right: 45%;
+    background: url("./img/sweetGirl.jpg");
+   background-size: 100%;
+    animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.sweet {
+    width: 180px;
+    height: 100px;
+    /*background: crimson;*/
+
+}
+.content {
+}
+
+@keyframes swing {
+    0% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotateZ(0deg) translate3d(0, 10%, 0) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg) translate3d(0, 10%, 0) rotateZ(-360deg);
+    }
+}
+
+@keyframes lighthouse{
+    0%{
+        transform: translate3d(15%,0,0)rotateZ(10deg);
+    }
+    100%{
+transform: translate3d(-15%,0,0)rotateZ(-10deg);
+    }
+}
